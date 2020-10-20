@@ -20,6 +20,12 @@ namespace Maximum_Value_Code
             double thirdDouble= Convert.ToDouble(Console.ReadLine());
             double maximumDouble = maximumValue.GetMaximumFloatingPointValue(firstDouble, secondDouble, thirdDouble);
             Console.WriteLine("The maximim Double Value is: " + maximumDouble);
+            Console.WriteLine("Enter three strings");
+            string firstString = Console.ReadLine();
+            string secondString = Console.ReadLine();
+            string thirdString = Console.ReadLine();
+            string maximumString = maximumValue.GetMaximumString(firstString, secondString, thirdString);
+            Console.WriteLine("Maximum String: "+ maximumString);
         }
     }
 }
