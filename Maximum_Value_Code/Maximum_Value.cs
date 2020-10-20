@@ -16,6 +16,10 @@ namespace Maximum_Value_Code
             Array.Sort(values);
             return values[values.Length - 1];
         }
+        public void DisplayMaximumValue()
+        {
+            Console.WriteLine("Maximum Value is: "+GetMaximumValue());
+        }
     }
 }
   

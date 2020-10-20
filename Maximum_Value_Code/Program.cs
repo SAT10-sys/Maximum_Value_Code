@@ -16,11 +16,8 @@ namespace Maximum_Value_Code
                 integerValues[i] = Convert.ToInt32(values[i]);
             }
             Maximum_Value<int> maximumInt = new Maximum_Value<int>(integerValues);
-            int maxIntNumber = maximumInt.GetMaximumValue();
-            Console.WriteLine("Maximum :" + maxIntNumber);
-
+            maximumInt.DisplayMaximumValue();
             double[] doubleValues = new double[100];
-
             Console.WriteLine("Enter float numbers seperated by comma");
             values = Console.ReadLine().Split(",");
             for (int i = 0; i < values.Length; i++)
@@ -28,14 +25,12 @@ namespace Maximum_Value_Code
                 doubleValues[i] = Convert.ToDouble(values[i]);
             }
             Maximum_Value<double> maximumDouble = new Maximum_Value<double>(doubleValues);
-            double maxDoubleNumber = maximumDouble.GetMaximumValue();
-            Console.WriteLine("Maximum :" + maxDoubleNumber);
-
+            maximumDouble.DisplayMaximumValue();
             Console.WriteLine("Enter Strings seperated by comma");
             values = Console.ReadLine().Split(",");
             Maximum_Value<string> maximumString = new Maximum_Value<string>(values);
             string maxString = maximumString.GetMaximumValue();
-            Console.WriteLine("Maximum :" + maxString);
+            maximumString.DisplayMaximumValue();
         }
     }
 }
