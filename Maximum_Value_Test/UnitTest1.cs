@@ -7,67 +7,28 @@ namespace Maximum_Value_Test
     public class UnitTest1
     {
         [TestMethod]
-        public void TestCase1_1()
+        public void TestCase4_1()
         {
-            Maximum_Value maximumValue = new Maximum_Value();
-            int maximumInteger = maximumValue.GetMaximumInteger(11, 2, 8);
-            Assert.AreEqual(11, maximumInteger);
+            int[] values = {1,23,11,45,12,7};
+            Maximum_Value<int> maximumNumber = new Maximum_Value<int>(values);
+            int max = maximumNumber.GetMaximumValue();
+            Assert.AreEqual(45, max);
         }
         [TestMethod]
-        public void TestCase1_2()
+        public void TestCase4_2()
         {
-            Maximum_Value maximumValue = new Maximum_Value();
-            int maximumInteger = maximumValue.GetMaximumInteger(30, 46, 18);
-            Assert.AreEqual(46, maximumInteger);
+            double[] values = { 0.98, 0.076, 0.23, 0.9912, 0.0346};
+            Maximum_Value<double> maximumNumber = new Maximum_Value<double>(values);
+            double max = maximumNumber.GetMaximumValue();
+            Assert.AreEqual(0.9912, max);
         }
         [TestMethod]
-        public void TestCase1_3()
+        public void TestCase4_3()
         {
-            Maximum_Value maximumValue = new Maximum_Value();
-            int maximumInteger = maximumValue.GetMaximumInteger(1, 4, 8);
-            Assert.AreEqual(8, maximumInteger);
-        }
-        [TestMethod]
-        public void TestCase2_1()
-        {
-            Maximum_Value maximumValue = new Maximum_Value();
-            double maximumDouble = maximumValue.GetMaximumFloatingPointValue(12.35, 2.0, 4.67);
-            Assert.AreEqual(12.35, maximumDouble);
-        }
-        [TestMethod]
-        public void TestCase2_2()
-        {
-            Maximum_Value maximumValue = new Maximum_Value();
-            double maximumDouble = maximumValue.GetMaximumFloatingPointValue(12.35,22.0, 4.67);
-            Assert.AreEqual(22.0, maximumDouble);
-        }
-        [TestMethod]
-        public void TestCase2_3()
-        {
-            Maximum_Value maximumValue = new Maximum_Value();
-            double maximumDouble = maximumValue.GetMaximumFloatingPointValue(12.35, 2.0,44.67);
-            Assert.AreEqual(44.67, maximumDouble);
-        }
-        [TestMethod]
-        public void TestCase3_1()
-        {
-            Maximum_Value maximumValue = new Maximum_Value();
-            string maximumString = maximumValue.GetMaximumString("Peach", "Orange", "Apple");
-            Assert.AreEqual("Peach", maximumString);
-        }
-        [TestMethod]
-        public void TestCase3_2()
-        {
-            Maximum_Value maximumValue = new Maximum_Value();
-            string maximumString = maximumValue.GetMaximumString("Orange", "Peach", "Apple");
-            Assert.AreEqual("Peach", maximumString);
-        }
-        [TestMethod]
-        public void TestCase3_3()
-        {
-            Maximum_Value maximumValue = new Maximum_Value();
-            string maximumString = maximumValue.GetMaximumString("Apple", "Orange", "Peach");
-            Assert.AreEqual("Peach", maximumString);
+            string[] values = {"apple", "ball", "dog", "elephant","cat" };
+            Maximum_Value<string> maximumNumber = new Maximum_Value<string>(values);
+            string max = maximumNumber.GetMaximumValue();
+            Assert.AreEqual("elephant", max);
         }
     }
 }
