@@ -16,5 +16,15 @@ namespace Maximum_Value_Code
                 return thirdInteger;
             throw new Exception("Numbers are same. Please enter different numbers");
         }
+        public double GetMaximumFloatingPointValue(double firstDouble, double secondDouble, double thirdDouble)
+        {
+            if (firstDouble.CompareTo(secondDouble) > 0 && firstDouble.CompareTo(thirdDouble) > 0)
+                return firstDouble;
+            if (secondDouble.CompareTo(firstDouble) > 0 && secondDouble.CompareTo(thirdDouble) > 0)
+                return secondDouble;
+            if (thirdDouble.CompareTo(firstDouble) > 0 && thirdDouble.CompareTo(secondDouble) > 0)
+                return thirdDouble;
+            throw new Exception("Numbers are same. Please enter different numbers");
+        }
     }
 }

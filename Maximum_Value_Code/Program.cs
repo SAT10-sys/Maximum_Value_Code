@@ -13,7 +13,13 @@ namespace Maximum_Value_Code
             int thirdInteger= Convert.ToInt32(Console.ReadLine());
             Maximum_Value maximumValue = new Maximum_Value();
             int maximumNumber = maximumValue.GetMaximumInteger(firstInteger, secondInteger, thirdInteger);
-            Console.WriteLine("The maximum Integer is: "+maximumNumber);
+            Console.WriteLine("The maximum Integer is: "+maximumNumber); 
+            Console.WriteLine("Enter three decimal values");
+            double firstDouble = Convert.ToDouble(Console.ReadLine());
+            double secondDouble= Convert.ToDouble(Console.ReadLine());
+            double thirdDouble= Convert.ToDouble(Console.ReadLine());
+            double maximumDouble = maximumValue.GetMaximumFloatingPointValue(firstDouble, secondDouble, thirdDouble);
+            Console.WriteLine("The maximim Double Value is: " + maximumDouble);
         }
     }
 }
